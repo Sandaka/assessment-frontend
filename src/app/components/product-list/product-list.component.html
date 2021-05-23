@@ -1,0 +1,16 @@
+<div class="row title-row">
+    <div class="col-md-8 title-one">
+        Available Product List
+    </div>
+    <div class="col-md-4 title-two">
+        Your Cart <i class="fa fa-shopping-cart"></i>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4" *ngFor="let product of productList">
+        <app-product-card [productItem]="product"></app-product-card>
+    </div>
+    <div class="col-md-4" style="margin-top: 15px;">
+        <app-cart></app-cart>
+    </div>
+</div>

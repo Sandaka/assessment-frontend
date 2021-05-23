@@ -1,0 +1,36 @@
+.home-page-header {
+    font-size: 18px;
+    width: 100%;
+    background-color: rgb(252, 211, 150);
+    height: 60px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+
+    .header {
+        margin-top: 30px;
+    }
+}
+
+.title-row {
+    padding: 10px;
+    border-radius: 10px;
+
+    .title-one {
+        background-color: rgb(232, 243, 255);
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+
+    .title-two {
+        background-color: rgb(255, 250, 240);
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+}

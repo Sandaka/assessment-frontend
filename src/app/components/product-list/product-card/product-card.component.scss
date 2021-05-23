@@ -1,0 +1,33 @@
+.card {
+    width: auto;
+    height: auto;
+    box-shadow: 0px 3px 3px black;
+    margin-top: 10px;
+
+    .product-header {
+        text-transform: uppercase;
+    }
+
+    .image-row {
+        width: 300px;
+        height: 250px;
+
+        .img {
+            width: 250px;
+            height: 250px;
+            align-items: center;
+        }
+    }
+
+    .infotip {
+        color: rgb(141, 141, 141);
+        font-size: smaller;
+        margin-top: 4px;
+        border-left: solid rgb(0, 174, 255);
+        border-right: solid rgb(0, 174, 255);
+    }
+
+    .qtyRow {
+        margin-top: 10px;       
+    }
+}

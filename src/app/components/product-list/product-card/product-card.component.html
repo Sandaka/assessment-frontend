@@ -1,0 +1,51 @@
+<div class="card">
+    <form [formGroup]="updateCartForm">
+        <div class="card-body">
+
+            <div class="row">
+                <h4 class="product-header"><b>{{productItem.productName}}</b></h4>
+            </div>
+            <hr>
+            <div class="row">
+                <span><b>Unit Price (LKR):</b> {{productItem.unitPrice}}</span>
+                <span><b>Carton Price (LKR):</b> {{productItem.cartonPrice}}</span>
+                <span class="infotip">{{productItem.discountMsg}}
+                    <br>
+                    <strong> Units per carton: {{productItem.unitsPerCarton}}</strong>
+                </span>
+            </div>
+            <hr>
+            <div class="row">
+                <span>Buying Option</span>
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <select class="form-select" formControlName="buyingOption" [ngClass]="{'form-control': true,
+                    'is-invalid': getControl.buyingOption.invalid && getControl.buyingOption.touched,
+                    'is-valid': getControl.buyingOption.valid}">
+                        <option value="by_units">Single Units</option>
+                        <option value="by_cartons">Cartons</option>
+                    </select>
+                    <small id="fnHelp" *ngIf="getControl.buyingOption.invalid && getControl.buyingOption.touched"
+                                    class="form-text custom-invalid-feedback" style="color: red;">Field is
+                                    required</small>
+                </div>
+            </div>
+            <div class="row qtyRow">
+                <div>
+                    <div class="btn-group">
+                        <input type="text" class="form-control" placeholder="Enter quantity" formControlName="qty" [ngClass]="{'form-control': true,
+                        'is-invalid': getControl.qty.invalid && getControl.qty.touched,
+                        'is-valid': getControl.qty.valid}">
+                        <button type="button" class="btn btn-sm btn-success product-btn"
+                            (click)="updateCart(updateCartForm.value)" [disabled]="updateCartForm.invalid">Update
+                            Cart</button>
+
+                            <small id="fnHelp" *ngIf="getControl.qty.invalid && getControl.qty.touched"
+                                    class="form-text custom-invalid-feedback" style="color: red;">Field is
+                                    required</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
